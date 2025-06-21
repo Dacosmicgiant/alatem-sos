@@ -1,0 +1,13 @@
+[
+  {
+    "id": "73172365-91f8-4bfb-ad0b-5b4d8ad9851d",
+    "username": "admin",
+    "password_hash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "full_name": "System Administrator",
+    "role": "admin",
+    "organization": "Alatem System",
+    "is_active": true,
+    "created_at": "2025-06-21T21:22:42.298844",
+    "last_login": null
+  }
+]

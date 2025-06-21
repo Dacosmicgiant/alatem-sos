@@ -1,4 +1,4 @@
-# ml_models.py - Fixed version with updated pandas syntax
+# ml_models.py - Fixed version with proper model saving/loading
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
@@ -8,6 +8,7 @@ from sklearn.metrics import classification_report, mean_absolute_error
 import joblib
 from datetime import datetime, timedelta
 import warnings
+import os
 warnings.filterwarnings('ignore')
 
 class HealthOutbreakPredictor:
@@ -16,6 +17,7 @@ class HealthOutbreakPredictor:
         self.cases_regressor = RandomForestRegressor(n_estimators=100, random_state=42)
         self.label_encoders = {}
         self.scaler = StandardScaler()
+        self.feature_cols = []  # Initialize feature_cols
         self.is_trained = False
     
     def prepare_features(self, df):
@@ -113,21 +115,37 @@ class HealthOutbreakPredictor:
         print("\nTop 5 Most Important Features:")
         print(feature_importance.head())
         
-        self.feature_cols = feature_cols
+        self.feature_cols = feature_cols  # Store feature columns
         self.is_trained = True
         
-        # Save models
+        # Ensure ml_models directory exists
+        os.makedirs('ml_models', exist_ok=True)
+        
+        # Save models and ALL necessary components
         joblib.dump(self.outbreak_classifier, 'ml_models/outbreak_classifier.pkl')
         joblib.dump(self.cases_regressor, 'ml_models/cases_regressor.pkl')
         joblib.dump(self.label_encoders, 'ml_models/label_encoders.pkl')
         joblib.dump(self.scaler, 'ml_models/scaler.pkl')
         
-        print("Models saved successfully!")
+        # IMPORTANT: Save feature_cols separately
+        joblib.dump(self.feature_cols, 'ml_models/feature_cols.pkl')
+        
+        print("✅ Models saved successfully!")
+        print("📁 Saved files:")
+        print("   - outbreak_classifier.pkl")
+        print("   - cases_regressor.pkl") 
+        print("   - label_encoders.pkl")
+        print("   - scaler.pkl")
+        print("   - feature_cols.pkl")  # New file
     
     def predict_outbreak_risk(self, area, condition, historical_data, days_ahead=7):
         """Predict outbreak risk for next 'days_ahead' days"""
         if not self.is_trained:
             print("Model not trained yet!")
+            return None
+        
+        if not hasattr(self, 'feature_cols') or not self.feature_cols:
+            print("Error: feature_cols not available. Model may not be properly loaded.")
             return None
         
         predictions = []
@@ -171,7 +189,7 @@ class HealthOutbreakPredictor:
                 'cases_rolling_7': historical_data.get('avg_cases_7d', 0)
             }
             
-            # Create feature array
+            # Create feature array using the stored feature_cols
             X_pred = np.array([[features[col] for col in self.feature_cols]])
             X_pred_scaled = self.scaler.transform(X_pred)
             
@@ -193,6 +211,7 @@ class CrimePredictor:
         self.crime_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
         self.label_encoders = {}
         self.scaler = StandardScaler()
+        self.feature_cols = []  # Initialize feature_cols
         self.is_trained = False
     
     def prepare_features(self, df):
@@ -256,13 +275,21 @@ class CrimePredictor:
         print("Crime Prediction Classification Report:")
         print(classification_report(y_test, y_pred))
         
-        self.feature_cols = feature_cols
+        self.feature_cols = feature_cols  # Store feature columns
         self.is_trained = True
         
-        # Save model
+        # Ensure ml_models directory exists
+        os.makedirs('ml_models', exist_ok=True)
+        
+        # Save model and components
         joblib.dump(self.crime_classifier, 'ml_models/crime_classifier.pkl')
-        joblib.dump({'crime_encoders': self.label_encoders, 'crime_scaler': self.scaler}, 'ml_models/crime_model_components.pkl')
-        print("Crime model saved!")
+        joblib.dump({
+            'crime_encoders': self.label_encoders, 
+            'crime_scaler': self.scaler,
+            'crime_feature_cols': self.feature_cols  # Add feature_cols to saved components
+        }, 'ml_models/crime_model_components.pkl')
+        
+        print("✅ Crime model saved!")
     
     def predict_crime_risk(self, area, days_ahead=7):
         """Predict crime risk for area"""
@@ -307,11 +334,12 @@ def train_all_models():
         
         print("\n" + "="*50)
         print("🎉 All models trained successfully!")
-        print("📁 Model files saved:")
+        print("📁 Model files saved in ml_models/:")
         print("   - outbreak_classifier.pkl")
         print("   - cases_regressor.pkl") 
         print("   - label_encoders.pkl")
         print("   - scaler.pkl")
+        print("   - feature_cols.pkl")  # New file
         print("   - crime_classifier.pkl")
         print("   - crime_model_components.pkl")
         

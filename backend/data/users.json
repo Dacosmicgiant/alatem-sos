@@ -1,0 +1,68 @@
+[
+  {
+    "id": "4523f124-b16e-462d-9fab-a8c4aa0b08e8",
+    "name": "Jean Baptiste",
+    "phone": "+50912345001",
+    "area": "CITE_SOLEIL",
+    "latitude": null,
+    "longitude": null,
+    "verified": true,
+    "active": true,
+    "created_at": "2025-06-21T21:22:42.299848"
+  },
+  {
+    "id": "aaee79b6-baa4-4591-a0de-f15c7101be4a",
+    "name": "Marie Claire",
+    "phone": "+50912345002",
+    "area": "CITE_SOLEIL",
+    "latitude": null,
+    "longitude": null,
+    "verified": true,
+    "active": true,
+    "created_at": "2025-06-21T21:22:42.299848"
+  },
+  {
+    "id": "4ea1af63-e18c-47fa-bd2a-a4a5011688b0",
+    "name": "Pierre Louis",
+    "phone": "+50912345003",
+    "area": "DELMAS",
+    "latitude": null,
+    "longitude": null,
+    "verified": true,
+    "active": true,
+    "created_at": "2025-06-21T21:22:42.299848"
+  },
+  {
+    "id": "6ddd4932-9eed-4d4b-a861-605e453844a7",
+    "name": "Anne Marie",
+    "phone": "+50912345004",
+    "area": "DELMAS",
+    "latitude": null,
+    "longitude": null,
+    "verified": true,
+    "active": true,
+    "created_at": "2025-06-21T21:22:42.299848"
+  },
+  {
+    "id": "f98a42b0-dfd4-4d50-a46c-b0162ee5d576",
+    "name": "Joseph Michel",
+    "phone": "+50912345005",
+    "area": "TABARRE",
+    "latitude": null,
+    "longitude": null,
+    "verified": true,
+    "active": true,
+    "created_at": "2025-06-21T21:22:42.299848"
+  },
+  {
+    "id": "cf14471c-b9f5-4901-923f-b505092139a4",
+    "name": "Rose Antoinette",
+    "phone": "+50912345006",
+    "area": "MARTISSANT",
+    "latitude": null,
+    "longitude": null,
+    "verified": true,
+    "active": true,
+    "created_at": "2025-06-21T21:22:42.299848"
+  }
+]
