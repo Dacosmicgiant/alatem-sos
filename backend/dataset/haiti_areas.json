@@ -1,0 +1,66 @@
+{
+  "CITE_SOLEIL": {
+    "population": 300000,
+    "risk_factor": 0.9,
+    "coordinates": [
+      18.5944,
+      -72.3074
+    ]
+  },
+  "DELMAS": {
+    "population": 500000,
+    "risk_factor": 0.6,
+    "coordinates": [
+      18.5483,
+      -72.3074
+    ]
+  },
+  "TABARRE": {
+    "population": 250000,
+    "risk_factor": 0.4,
+    "coordinates": [
+      18.5736,
+      -72.2928
+    ]
+  },
+  "MARTISSANT": {
+    "population": 200000,
+    "risk_factor": 0.8,
+    "coordinates": [
+      18.5089,
+      -72.3444
+    ]
+  },
+  "CARREFOUR": {
+    "population": 450000,
+    "risk_factor": 0.7,
+    "coordinates": [
+      18.5413,
+      -72.3979
+    ]
+  },
+  "PETIONVILLE": {
+    "population": 350000,
+    "risk_factor": 0.3,
+    "coordinates": [
+      18.5125,
+      -72.2853
+    ]
+  },
+  "CROIX_DES_BOUQUETS": {
+    "population": 180000,
+    "risk_factor": 0.5,
+    "coordinates": [
+      18.5792,
+      -72.2261
+    ]
+  },
+  "PORT_AU_PRINCE": {
+    "population": 1200000,
+    "risk_factor": 0.8,
+    "coordinates": [
+      18.5944,
+      -72.3074
+    ]
+  }
+}
