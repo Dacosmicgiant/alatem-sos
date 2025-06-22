@@ -1,0 +1,52 @@
+[
+  {
+    "id": "c85ebbc3-6c0d-4fd3-81f9-b1d397964ab8",
+    "alert_type": "health_outbreak",
+    "area": "CITE_SOLEIL",
+    "message": "\ud83d\udea8 AL\u00c8T SANTE: Ka cholera nan CITE_SOLEIL. Bw\u00e8 dlo pw\u00f2p, lave men nou. Ale kay dokt\u00e8 si nou gen simpt\u00f2m.",
+    "recipients_count": 0,
+    "timestamp": "2025-06-22T07:07:46.170790",
+    "triggered_by": "admin",
+    "staff_user_id": "73172365-91f8-4bfb-ad0b-5b4d8ad9851d"
+  },
+  {
+    "id": "520d3928-fab7-4c8e-93cc-f2bf7902ba87",
+    "alert_type": "safety_alert",
+    "area": "CITE_SOLEIL",
+    "message": "\ud83d\udea8 SEKIRITE: Kidnapping nan CITE_SOLEIL. Pa mache pou kont nou. Evite kote yo ki izole.",
+    "recipients_count": 0,
+    "timestamp": "2025-06-22T07:08:14.117502",
+    "triggered_by": "admin",
+    "staff_user_id": "73172365-91f8-4bfb-ad0b-5b4d8ad9851d"
+  },
+  {
+    "id": "9ae37f03-3f25-4da5-b9d0-17fe4eed79d0",
+    "alert_type": "safety_alert",
+    "area": "CITE_SOLEIL",
+    "message": "\ud83d\udea8 SEKIRITE: Kidnapping nan CITE_SOLEIL. Pa mache pou kont nou. Evite kote yo ki izole.",
+    "recipients_count": 0,
+    "timestamp": "2025-06-22T07:08:24.018577",
+    "triggered_by": "admin",
+    "staff_user_id": "73172365-91f8-4bfb-ad0b-5b4d8ad9851d"
+  },
+  {
+    "id": "ccc4a328-0961-4a10-b880-4b25b69131aa",
+    "alert_type": "health_outbreak",
+    "area": "CITE_SOLEIL",
+    "message": "\ud83d\udea8 AL\u00c8T SANTE: Ka cholera nan CITE_SOLEIL. Bw\u00e8 dlo pw\u00f2p, lave men nou. Ale kay dokt\u00e8 si nou gen simpt\u00f2m.",
+    "recipients_count": 0,
+    "timestamp": "2025-06-22T07:08:37.298931",
+    "triggered_by": "admin",
+    "staff_user_id": "73172365-91f8-4bfb-ad0b-5b4d8ad9851d"
+  },
+  {
+    "id": "894e1f12-db4f-44ae-a44e-33f2c1c825eb",
+    "alert_type": "health_outbreak",
+    "area": "CITE_SOLEIL",
+    "message": "\ud83d\udea8 AL\u00c8T SANTE: Ka cholera nan CITE_SOLEIL. Bw\u00e8 dlo pw\u00f2p, lave men nou. Ale kay dokt\u00e8 si nou gen simpt\u00f2m.",
+    "recipients_count": 0,
+    "timestamp": "2025-06-22T07:11:04.674327",
+    "triggered_by": "admin",
+    "staff_user_id": "73172365-91f8-4bfb-ad0b-5b4d8ad9851d"
+  }
+]
